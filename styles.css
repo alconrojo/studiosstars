@@ -1,14 +1,13 @@
-/* Importar la fuente de Google Fonts */
+/* Estilos globales del cuerpo */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
-/* Estilo general del cuerpo del documento */
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #1f4037, #99f2c8);
-    color: #f0f0f0;
+    background: linear-gradient(135deg, #000000, #333333);
+    color: #e0e0e0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -26,9 +25,9 @@ body {
     left: 0;
     z-index: -1;
     pointer-events: none;
-    background-image: radial-gradient(circle, rgba(42, 75, 124, 0.8) 1%, transparent 1%);
-    background-size: 3px 3px;
-    animation: particles 10s infinite linear;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.8) 1%, transparent 1%);
+    background-size: 5px 5px;
+    animation: particles 15s infinite linear;
 }
 
 @keyframes particles {
@@ -36,7 +35,7 @@ body {
         background-position: 0 0;
     }
     100% {
-        background-position: 400px 400px;
+        background-position: 100px 100px;
     }
 }
 
@@ -53,38 +52,33 @@ body {
 .bubble {
     position: absolute;
     bottom: -100px;
-    width: 40px;
-    height: 40px;
-    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(0, 255, 188, 0.6));
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3), rgba(1, 60, 138, 0.3));
     border-radius: 50%;
-    animation: bubble 10s linear infinite, float 3s ease-in-out infinite;
-    opacity: 0.7;
-    box-shadow: inset -10px -10px 20px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: bubble 12s linear infinite, float 5s ease-in-out infinite;
+    opacity: 0.6;
     filter: blur(1px);
 }
 
 .bubble:nth-child(even) {
-    animation-duration: 12s;
-    width: 50px;
-    height: 50px;
-}
-
-.bubble:nth-child(3n) {
-    animation-duration: 14s;
     width: 60px;
     height: 60px;
 }
 
+.bubble:nth-child(3n) {
+    width: 70px;
+    height: 70px;
+}
+
 .bubble:nth-child(4n) {
-    animation-duration: 16s;
-    width: 45px;
-    height: 45px;
+    width: 80px;
+    height: 80px;
 }
 
 .bubble:nth-child(5n) {
-    animation-duration: 18s;
-    width: 55px;
-    height: 55px;
+    width: 90px;
+    height: 90px;
 }
 
 @keyframes bubble {
@@ -121,12 +115,12 @@ body {
 
 /* Estilo del encabezado */
 header {
-    background: linear-gradient(to bottom, rgba(33, 161, 208, 0.8), rgba(71, 137, 191, 0.6));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
     color: #ffffff;
     padding: 20px;
     text-align: center;
     width: 100%;
-    box-shadow: 0 2px 4px rgba(2, 93, 93, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -135,19 +129,10 @@ header {
 
 header h1 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 3.5em;
-    animation: neon-flicker 1.5s infinite alternate;
-    text-shadow: 0 0 15px #00e676, 0 0 30px #00ff84, 0 0 45px #00e676;
-    letter-spacing: 3px;
-}
-
-@keyframes neon-flicker {
-    0%, 100% {
-        text-shadow: 0 0 10px #00e676, 0 0 20px #00ff84, 0 0 30px #00e676;
-    }
-    50% {
-        text-shadow: 0 0 15px #00e676, 0 0 30px #00ff84, 0 0 40px #00e676;
-    }
+    font-size: 3em;
+    color: #ffffff;
+    text-shadow: 0 0 10px #32a9f8, 0 0 20px #199dbe;
+    letter-spacing: 4px;
 }
 
 /* Estilo de la navegación */
@@ -161,16 +146,16 @@ nav ul {
 }
 
 nav ul li {
-    margin: 10px;
+    margin: 8px;
 }
 
 nav a {
     color: #ffffff;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 8px 16px;
     display: block;
-    border: 2px solid transparent;
-    border-radius: 5px;
+
+    border-radius: 6px;
     transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -183,7 +168,7 @@ nav a::before {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
     transition: all 0.4s ease;
 }
 
@@ -192,10 +177,10 @@ nav a:hover::before {
 }
 
 nav a:hover {
-    background-color: #00e676;
+    background-color: #3d9cf5;
     color: #121212;
-    box-shadow: 0 0 10px #00e676, 0 0 20px #00e676;
-    border-color: #00e676;
+    box-shadow: 0 0 8px #1491da, 0 0 16px #1387d4;
+    border-color: #37a1d3;
     transform: translateY(-5px);
 }
 
@@ -225,18 +210,18 @@ nav a:hover {
 }
 
 .gallery-item {
-    background: linear-gradient(to bottom right, #1f1f1f, #000000);
+    background: linear-gradient(to bottom right, #1a1a1a, #000000);
     border-radius: 12px;
-    border: 2px solid #00e676;
+    border: 2px solid #45dbe0;
     overflow: hidden;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 300px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .gallery-item:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .gallery-item img {
@@ -253,9 +238,8 @@ nav a:hover {
 .gallery-item-info h3 {
     margin: 10px 0;
     font-weight: 700;
-    color: #00e676;
-    text-shadow: 0 0 8px #00e676, 0 0 12px #00e676;
-    animation: neon-flicker 1.8s infinite alternate;
+    color: #3b70d3;
+    text-shadow: 0 0 6px #2885ff, 0 0 12px #3086d6;
 }
 
 .gallery-item-info p {
@@ -267,29 +251,28 @@ nav a:hover {
 .section {
     padding: 40px;
     margin: 40px 0;
-    background: rgba(20, 20, 20, 0.95);
+    background: rgba(20, 20, 20, 0.8);
     border-radius: 12px;
-    border: 2px solid #00e676;
+    border: 2px solid #0c61c2;
     width: 100%;
     max-width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .section-title {
     margin-bottom: 30px;
     font-weight: 700;
-    color: #00e676;
-    text-shadow: 0 0 8px #00e676, 0 0 12px #00e676;
-    animation: neon-flicker 1.8s infinite alternate;
+    color: #67a4ff;
+    text-shadow: 0 0 6px #0648ff, 0 0 12px #0017e6;
 }
 
 /* Estilo del pie de página */
 footer {
-    background-color: rgba(30, 136, 229, 0.95);
+    background-color: rgba(0, 0, 0, 0.8);
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
@@ -307,22 +290,41 @@ footer {
     overflow: hidden;
     border: none;
     background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 30px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .discord-button {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #7289da;
+    background-color: #1838af;
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
-    border-radius: 25px;
+    border-radius: 15px;
     transition: transform 0.3s ease-in-out;
 }
 
 .discord-button:hover {
     transform: scale(1.05);
 }
- 
+
+footer {
+    background: linear-gradient(135deg, #000000, #1f1f1f);
+    color: #ffffff;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(28, 117, 218, 0.4); /* Reducida la sombra para un efecto más sutil */
+}
+
+/* Estilo de los enlaces del footer */
+footer a {
+    color: #2e8fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+footer p {
+    color: #d3d3d3;
+    font-size: 13px; /* Reducido el tamaño de fuente */
+}
+
